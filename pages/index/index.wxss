@@ -50,6 +50,10 @@ margin: 80rpx 0;
   font-size: 10px;
   background-color:rgba(0,0,0,0.6);
   padding:20rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .suggest-box+.suggest-box{
   border-top:1px solid #ccc;
