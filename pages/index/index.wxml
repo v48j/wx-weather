@@ -1,0 +1,42 @@
+<view class="all-box">
+  <view class="all-text">
+    <view class="title">晨晨天气</view>
+    <view class="city-box">
+      <view class="city-name">
+        <text class="city">{{weatherData.currentCity}}</text>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+          <image src="http://pg2773e44.bkt.clouddn.com/dizhi3%20%281%29.png" class="add-btn" bindtap="addSel" />
+        </picker>
+      </view>
+      <view class="city-r">
+        <text>{{region[2]}}</text>
+        <text>{{weatherData.pm25?"pm2.5:":""}}{{weatherData.pm25}}</text>
+      </view>
+    </view>
+    <view class="wenhou">{{wenhou}}</view>
+    <view class="tem-box">
+      <text class="tem">{{temperature}}</text>
+      <view>{{weatherData.temperature}}</view>
+      <view>{{weatherData.weatherDesc}}</view>
+    </view>
+    <view class="update-time">{{updateTime}}{{updateTime?"更新":""}}</view>
+    <view class="next">
+      <view class="ele-box" wx:for="{{tomorrowArr}}" wx:key="{{index}}">
+        <view>{{item.date.length>2?"今天":item.date}}</view>
+        <view>{{item.temperature}}</view>
+        <view>{{item.weather}}</view>
+        <view>{{item.wind}}</view>
+      </view>
+    </view>
+    <view class="suggest">
+      <view class="suggest-box" wx:for="{{suggestArr}}" wx:key="{{index}}">
+        <view>{{item.tipt}}:{{item.zs}}</view>
+        <view>{{item.des}}</view>
+      </view>
+    </view>
+    <view class="footer">
+      <text>数据来源：百度　制作者：v48j</text>
+    </view>
+  </view>
+</view>
+<picker mode="region" bindchange="bindRegionChange" value="{{region}}"></picker>

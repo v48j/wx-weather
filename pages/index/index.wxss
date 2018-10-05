@@ -1,0 +1,88 @@
+.all-box{
+  color:#fff;
+  background: url(http://pg2773e44.bkt.clouddn.com/BG.JPG);
+  min-height:96vh;
+position: relative;
+padding-bottom: 4vh;
+}
+.all-text{
+  box-sizing: border-box;
+}
+
+.search{
+  border-bottom:1px solid #fff;
+}
+.search-box{
+  padding:0 30rpx;
+}
+
+.title{
+  line-height: 200rpx;
+  padding:0 30rpx;
+  font-size: 20px;
+}
+.city-box{
+  padding:0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 12px;
+}
+.city-name{
+  display: flex;
+  align-items: flex-end;
+}
+.city{
+  font-size: 30px;
+}
+.city-r{
+  display: flex;
+  flex-direction: column;
+}
+.tem-box{
+text-align:center;
+margin: 80rpx 0;
+}
+.tem{
+  font-size: 60px;
+}
+.suggest-box{
+  font-size: 10px;
+  background-color:rgba(0,0,0,0.6);
+  padding:20rpx;
+}
+.suggest-box+.suggest-box{
+  border-top:1px solid #ccc;
+}
+.next{
+  display: flex;
+  font-size: 10px;
+  justify-content: space-between;
+  text-align:center;
+  background-color:rgba(0,0,0,0.6);
+  margin-bottom: 20rpx;
+}
+.ele-box{
+   padding:20rpx;
+}
+.footer{
+  text-align:center;
+  font-size: 10px;
+  padding:10rpx;
+  position: absolute;
+  bottom: 0;
+  width:100%;
+}
+.add-btn{
+  width:35px;
+  height: 35px;
+}
+.update-time{
+  font-size: 12px;
+  margin-left: 10rpx;
+}
+.wenhou{
+  margin-left: 30rpx;
+  font-size: 12px;
+  margin-top: 10rpx;
+}

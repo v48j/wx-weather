@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "晨晨天气",
+    "navigationBarBackgroundColor": "#f48",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true
+  }
+}
