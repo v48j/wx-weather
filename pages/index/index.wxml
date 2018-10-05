@@ -1,11 +1,11 @@
-<view class="all-box">
+<view class="all-box" style="background-image: url({{bgurl}})">
   <view class="all-text">
     <view class="title">晨晨天气</view>
     <view class="city-box">
       <view class="city-name">
         <text class="city">{{weatherData.currentCity}}</text>
         <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
-          <image src="http://pg2773e44.bkt.clouddn.com/dizhi3%20%281%29.png" class="add-btn" bindtap="addSel" />
+          <image src="http://pg2773e44.bkt.clouddn.com/dizhi3%20%281%29.png" class="add-btn" />
         </picker>
       </view>
       <view class="city-r">

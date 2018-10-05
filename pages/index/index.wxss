@@ -1,9 +1,9 @@
 .all-box{
   color:#fff;
-  background: url(http://pg2773e44.bkt.clouddn.com/BG.JPG);
+  background-size: auto 100%;
   min-height:96vh;
-position: relative;
-padding-bottom: 4vh;
+  position: relative;
+  padding-bottom: 4vh;
 }
 .all-text{
   box-sizing: border-box;
@@ -84,6 +84,7 @@ margin: 80rpx 0;
 .update-time{
   font-size: 12px;
   margin-left: 10rpx;
+  margin-bottom: 10rpx;
 }
 .wenhou{
   margin-left: 30rpx;

@@ -13,10 +13,15 @@ Page({
     tomorrowArr: [],
     updateTime: '',
     region: ['北京市', '北京市', '市区'],
-    wenhou: ''
+    wenhou: '',
+    bgurl: ''
   },
   onLoad: function () {
     this.getWeather()
+  },
+  onPullDownRefresh() {
+    this.getWeather()
+    wx.stopPullDownRefresh()
   },
   go() {
     const that = this
@@ -56,20 +61,27 @@ Page({
       var tem = weatherData.date.match(/-?[0-9]{1,2}[℃]/g)
       var suggestArr = data.originalData.results[0].index
       var tomorrowArr = data.originalData.results[0].weather_data
+      var bgurl = ''
       //根据时间设置问候语
       var wenhou = ''
       if (myDate.getHours() >= 0 && myDate.getHours() <= 6) {
         wenhou = '这么晚还不睡，多半是没有女朋友'
+        bgurl = 'http://pg2773e44.bkt.clouddn.com/yewan1.JPG'
       } else if (myDate.getHours() >= 7 && myDate.getHours() <= 10) {
         wenhou = '早上好!愿你今天有个好心情!'
+        bgurl = 'http://pg2773e44.bkt.clouddn.com/shangwu1.jpg'
       } else if (myDate.getHours() >= 11 && myDate.getHours() <= 12) {
         wenhou = '再坚持一下就要下班啦!'
-      } else if (myDate.getHours() >= 13 && myDate.getHours() <= 17) {
+        bgurl = 'http://pg2773e44.bkt.clouddn.com/shangwu3.jpg'
+      } else if (myDate.getHours() >= 13 && myDate.getHours() <= 18) {
         wenhou = '下午好!工作再忙也不要忘了活动身体'
-      } else if (myDate.getHours() >= 18 && myDate.getHours() <= 22) {
+        bgurl = 'http://pg2773e44.bkt.clouddn.com/BGxiyang.JPG'
+      } else if (myDate.getHours() >= 19 && myDate.getHours() <= 22) {
         wenhou = '下班了要记得给自己充充电'
+        bgurl = 'http://pg2773e44.bkt.clouddn.com/yewan1.JPG'
       } else {
         wenhou = '告别一天的忙碌，忘掉一天的烦恼。早点睡吧！'
+        bgurl = 'http://pg2773e44.bkt.clouddn.com/yewan1.JPG'
       }
       //console.log(weatherData)
       console.log(weatherData.temperature)
@@ -81,7 +93,8 @@ Page({
         suggestArr: suggestArr,
         tomorrowArr: tomorrowArr,
         updateTime: myTime,
-        wenhou: wenhou
+        wenhou: wenhou,
+        bgurl: bgurl
       });
     }
     // 发起weather请求 
